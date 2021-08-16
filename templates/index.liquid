@@ -4,9 +4,9 @@
 {% endfor %}
 </ul>
 
-{% assign name = 'eddie','wang','1991'%}
-{% for c in name %}
-{{c}}
+
+{% for tag in product.tags %}
+  {{ tag }}
 {% endfor %}
 
 {{ content_for_index }}
