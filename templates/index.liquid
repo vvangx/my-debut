@@ -4,9 +4,12 @@
 {% endfor %}
 </ul>
 
-<div>
-  {% form 'new_comment', article %}
-  {% endform %}
-</div>
+{% assign arr = [{name: "a"}, {name: "b"}, {name: "c"}] %}
+
+<table>
+{% tablerow item in arr %}
+  {{ item.name }}
+{% endtablerow%}
+</table>
 
 {{ content_for_index }}
