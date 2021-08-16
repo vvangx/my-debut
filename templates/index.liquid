@@ -4,11 +4,11 @@
 {% endfor %}
 </ul>
 
-{% assign arr = [{name: "a"}, {name: "b"}, {name: "c"}] %}
+{% assign arr = ["a","b","c"] %}
 
 <table>
 {% tablerow item in arr %}
-  {{ item.name }}
+  {{ item }}
 {% endtablerow%}
 </table>
 
