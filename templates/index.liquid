@@ -5,11 +5,9 @@
 </ul>
 
 {% assign arr = ["a","b","c"] %}
+{% for item in arr %}
+{{ item }}
+{% endfor %}
 
-<table>
-{% tablerow item in arr %}
-  {{ item }}
-{% endtablerow%}
-</table>
 
 {{ content_for_index }}
