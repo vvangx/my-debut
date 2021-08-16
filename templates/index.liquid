@@ -4,6 +4,9 @@
 {% endfor %}
 </ul>
 
-<div>{{ 'foo.css' | asset_url }} - {{ 'a.jpg' | img_url }}</div>
+<div>
+  {% form 'new_comment', article %}
+  {% endform %}
+</div>
 
 {{ content_for_index }}
