@@ -5,6 +5,9 @@
 </ul>
 
 {% assign foo = [1,2,3]%}
-{{ foo }}
+
+{% for i in foo %}
+<div>{{ i }}</div>
+{% endfor%}
 
 {{ content_for_index }}
