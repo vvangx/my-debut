@@ -5,6 +5,8 @@
 </ul>
 
 {% assign name = 'eddie'%}
-{{ name }}
+{% for c in name | split: '' %}
+{{c}}
+{% endfor %}
 
 {{ content_for_index }}
