@@ -1,4 +1,3 @@
-<h3>{{ linklists.title }}</h3>
 <ul>
 {% for link in linklists.main-menu.links %}
   <li>{{ link.title | link_to: link.url, link.title }}</li>
