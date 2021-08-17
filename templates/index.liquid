@@ -8,8 +8,11 @@
 <p>{{ page_title }}</p>
 
 
-{% form 'contact' %}
-...
-{% endform %}
+{% paginate collection.products by 5 %}
+  {% for product in collection.products %}
+    <!--show product details here -->
+  {% endfor %}
+{% endpaginate %}
+
 
 {{ content_for_index }}
