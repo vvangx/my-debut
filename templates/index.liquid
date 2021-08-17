@@ -4,9 +4,11 @@
 {% endfor %}
 </ul>
 
-{% assign my_name = 'hello world' %}
+{% capture hello %}
+hi, nice to meet to you
+{% endcapture %}
 
-<h3>{{ my_name -}}</h3>
+<p>{{ hello }}</p>
 
 <h2>{{paginate.page_size}}</h2>
 {{ content_for_index }}
