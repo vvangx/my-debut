@@ -7,12 +7,10 @@
 
 <p>{{ page_title }}</p>
 
-
-{% paginate collection.products by 5 %}
-  {% for product in collection.products %}
-    <!--show product details here -->
-  {% endfor %}
-{% endpaginate %}
-
+{% style %}
+.foo {
+	color: hotpink;
+}
+{% endstyle %}
 
 {{ content_for_index }}
