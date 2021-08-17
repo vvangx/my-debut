@@ -5,14 +5,11 @@
 </ul>
 
 
-{% liquid
-if product.featured_image
-  echo product.featured_image | img_tag
-else
-  echo 'product-1' | placeholder_svg_tag
-endif %}
-
 <p>{{ page_title }}</p>
 
-<h2>{{paginate.page_size}}</h2>
+
+{% form 'contact' %}
+...
+{% endform %}
+
 {{ content_for_index }}
