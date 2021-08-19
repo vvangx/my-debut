@@ -16,6 +16,10 @@
       </div>
       <div>
         {{pagenate.page_size}}
+        {% assign policy = shop.privacy_policy %}
+
+{{ policy.body }}
+
       </div>
     </div>
   </div>
