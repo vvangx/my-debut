@@ -1,16 +1,6 @@
-<ul>
-{% for link in linklists.main-menu.links %}
-  <li>{{ link.title | link_to: link.url, link.title }}</li>
-{% endfor %}
-</ul>
-
-{% if customer %}
-  Customer is logged in. You can access the customer
-  attributes such as {{ customer.first_name }}.
-{% endif %}
-
-
-<p>{{ page_title }}</p>
+ISO Code: {{ currency.iso_code }}
+Name: {{ currency.name }}
+Symbol: {{ currency.symbol }}
 
 
 {{ content_for_index }}
