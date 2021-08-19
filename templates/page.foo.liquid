@@ -7,9 +7,9 @@
 
       <div class="rte">
         {{ page.content }}
-        <div>{{page_title | upcase | sha256 }}</div>
-        <div>{{page_title | upcase | sha256 }}</div>
-        <div>{{page_title | upcase | sha256 }}</div>
+        <div>{{page_title | upcase | hmac_sha256: 'a' }}</div>
+        <div>{{page_title | upcase | hmac_sha256: 'b' }}</div>
+        <div>{{page_title | upcase | hmac_sha256: 'c' }}</div>
       </div>
     </div>
   </div>
