@@ -15,10 +15,11 @@
 		{{ 'Log in' | customer_login_link }}
       </div>
       <div>
-        {{pagenate.page_size}}
-        {% assign policy = shop.privacy_policy %}
+This product belongs in the following collections:
 
-{{ policy.body }}
+{% for collection in product.collections %}
+    {{ collection.title }}
+{% endfor %}
 
       </div>
     </div>
