@@ -1,6 +1,6 @@
 <h3><b>test</b></h3>
 
-<div>{{page_title | upcase}}</div>
+<div>{{page_title | remove: '.dev' | upcase}}</div>
 
 
 {{- content_for_index -}}
