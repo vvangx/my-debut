@@ -13,11 +13,12 @@
         {{ 'size-chart.pdf' | file_url }}
         {{ 'logo.png' | file_img_url: '1024x768' }}
 		{{ 'Log in' | customer_login_link }}
-        {{ product | img_url: '100x100' }}
-{{ variant | img_url: '720x720' }}
-{{ line_item | img_url: '1024x' }}
-{{ product | img_url }}
-
+      </div>
+      <div>
+      	{{ product | img_url: '100x100' }}
+		{{ variant | img_url: '720x720' }}
+		{{ line_item | img_url: '1024x' }}
+		{{ product | img_url }}
       </div>
     </div>
   </div>
