@@ -15,11 +15,7 @@
 		{{ 'Log in' | customer_login_link }}
       </div>
       <div>
-        {{page.url}}
-        {% if paginate.next.is_link %}
-    <a href="{{ paginate.next.url }}">{{ paginate.next.title }}</a>
-{% endif %}
-
+        {{pagenate.page_size}}
       </div>
     </div>
   </div>
