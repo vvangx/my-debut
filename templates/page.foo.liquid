@@ -7,7 +7,7 @@
 
       <div class="rte">
         {{ page.content }}
-        <div>{{page_title | upcase }}</div>
+        <div>{{page_title | upcase | md5 }}</div>
       </div>
     </div>
   </div>
