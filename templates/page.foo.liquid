@@ -15,7 +15,8 @@
 		{{ 'Log in' | customer_login_link }}
       </div>
       <div>
-        {{measurement.name}}
+        Type: {{ product.metafields.instructions.wash.type }}
+		Wash: {{ product.metafields.instructions.wash.value }}
       </div>
     </div>
   </div>
