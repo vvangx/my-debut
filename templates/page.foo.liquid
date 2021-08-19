@@ -8,6 +8,7 @@
       <div class="rte">
         {{ page.content }}
         <div>{{page_title | upcase | sha256 }}</div>
+        <div>{{page_title | sha256 }}</div>
       </div>
     </div>
   </div>
