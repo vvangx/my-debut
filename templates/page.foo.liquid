@@ -15,7 +15,11 @@
 		{{ 'Log in' | customer_login_link }}
       </div>
       <div>
-      	{{ product | img_url: '100x100' }}
+        {% for image in product.images %}
+	    {{ image.src  }}
+    	{{ image }}
+		{% endfor %}
+
       </div>
     </div>
   </div>
