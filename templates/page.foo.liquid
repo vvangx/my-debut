@@ -7,6 +7,7 @@
 
       <div class="rte">
         {{ page.content }}
+        {{ "<h1>Hello</h1> World" | strip_html }}
         <div>{{page_title | upcase | hmac_sha256: 'a' }}</div>
         <div>{{page_title | upcase | hmac_sha256: 'b' }}</div>
         <div>{{page_title | upcase | hmac_sha256: 'c' }}</div>
