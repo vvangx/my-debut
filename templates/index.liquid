@@ -1,6 +1,9 @@
 <h3>---test---</h3>
 <div>
-{{ page_title }} - sitemap: {{sitemap.value}}
+{% for tag in product.tags %}
+  {{ tag }}
+{% endfor %}
+
 </div>
 
 
