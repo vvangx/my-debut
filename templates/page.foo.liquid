@@ -15,12 +15,7 @@
 		{{ 'Log in' | customer_login_link }}
       </div>
       <div>
-This product belongs in the following collections:
-
-{% for collection in product.collections %}
-    {{ collection.title }}
-{% endfor %}
-
+        {{ routes.root_url }}
       </div>
     </div>
   </div>
