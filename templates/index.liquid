@@ -4,6 +4,11 @@
 {% endfor %}
 </ul>
 
+{% if customer %}
+  Customer is logged in. You can access the customer
+  attributes such as {{ customer.first_name }}.
+{% endif %}
+
 
 <p>{{ page_title }}</p>
 
