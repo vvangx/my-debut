@@ -3,9 +3,16 @@
     "name": "carousel",
     "settings": [
 		{
-			"type": "image_picker",
-			"id": "image_item",
-			"label": "carousel item"
+			"type": "text",
+			"id": "txt",
+			"label": "carousel item header"
+		}
+	],
+	"blocks": [
+		{
+			"name": "carousel item",
+			"type": "carousel_item",
+			"settings": [{"type": "image_picker", "id": "carousel_item", "label": "this is a carousel item"}]
 		}
 	]
   }
