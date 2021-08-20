@@ -1,1 +1,5 @@
-<h1>hello, {{ name }}</h1>
+<div>
+  {% for block in blocks %}
+  {{ block.settings.carousel_item | img_tag }}
+  {% endfor %}
+</div>
