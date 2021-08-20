@@ -15,9 +15,7 @@
 		{{ 'Log in' | customer_login_link }}
       </div>
       <div>
-        {{ routes.root_url }}
-        {{ 10086 | money }}
-        {{ user_agent.value }}
+        {% render 'foo-snippet', name: 'Eddie' %}
       </div>
     </div>
   </div>
