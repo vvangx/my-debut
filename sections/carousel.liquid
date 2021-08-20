@@ -1,3 +1,4 @@
+
 {% render 'foo-snippet', blocks: section.blocks %}
 
 
@@ -21,11 +22,11 @@
   }
 {% endschema %}
 
-{% stylesheet %}
+<style>
 .carousel {
 	background-color: pink;
 }
-{% endstylesheet %}
+</style>
 
 {% javascript %}
 	document.querySelector('.carousel').addEventListener('click', (e) => console.log(e));
