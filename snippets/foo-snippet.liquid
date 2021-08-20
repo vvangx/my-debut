@@ -1,4 +1,4 @@
-<div>
+<div class="carousel_wrapper">
   {% for block in blocks %}
   {{ block.settings.carousel_item | img_url: '300x' | img_tag }}
   {% endfor %}
