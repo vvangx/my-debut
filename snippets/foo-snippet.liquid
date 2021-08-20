@@ -1,6 +1,6 @@
 <div>
   {% for block in blocks %}
-  {{ block.settings.carousel_item | img_tag }}
+  {{ block.settings.carousel_item | img_url: '300x' | img_tag }}
   {% endfor %}
 </div>
 
