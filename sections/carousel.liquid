@@ -1,0 +1,33 @@
+
+{% render 'foo-snippet', blocks: section.blocks %}
+
+
+{% schema %}
+{
+    "name": "Carousel",
+	"class": "carousel",
+	"blocks": [
+		{
+			"name": "carousel item",
+			"type": "carousel_item",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "carousel_item",
+					"label": "this is a carousel item"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}
+
+<style>
+.carousel {
+	background-color: pink;
+}
+</style>
+
+{% javascript %}
+	document.querySelector('.carousel').addEventListener('click', (e) => console.log(e));
+{% endjavascript %}
