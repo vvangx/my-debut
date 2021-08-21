@@ -1,6 +1,17 @@
-
 {% render 'foo-snippet', blocks: section.blocks %}
 
+{% stylesheet %}
+.carousel_wrapper {
+	--foo: hotpink;
+}
+.carousel {
+	background-color: pink;
+}
+{% endstylesheet %}
+
+{% javascript %}
+	document.querySelector('.carousel').addEventListener('click', (e) => console.log(e));
+{% endjavascript %}
 
 {% schema %}
 {
@@ -22,15 +33,3 @@
   }
 {% endschema %}
 
-{% stylesheet %}
-.carousel_wrapper {
-  --foo: hotpink;
-}
-.carousel {
-	background-color: pink;
-}
-{% endstylesheet %}
-
-{% javascript %}
-	document.querySelector('.carousel').addEventListener('click', (e) => console.log(e));
-{% endjavascript %}
