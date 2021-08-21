@@ -22,11 +22,14 @@
   }
 {% endschema %}
 
-<style>
+{% stylesheet %}
+.carousel_wrapper {
+  --foo: hotpink;
+}
 .carousel {
 	background-color: pink;
 }
-</style>
+{% endstylesheet %}
 
 {% javascript %}
 	document.querySelector('.carousel').addEventListener('click', (e) => console.log(e));
