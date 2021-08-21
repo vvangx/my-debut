@@ -21,6 +21,7 @@
 	const items = document.querySelectorAll('.carousel_item');
 	items.forEach(item => {
 		item.addEventListener('click', (e) => {
+			console.log('clicked');
 			gsap.to(item, {scale: 1.5})
 		})
 	})
