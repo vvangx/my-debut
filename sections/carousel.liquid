@@ -1,4 +1,11 @@
-{% render 'foo-snippet', blocks: section.blocks %}
+<div class="carousel_wrapper">
+  {% for block in section.blocks %}
+  <div class="carousel_item">
+	{{ block.settings.carousel_item | img_url: '300x' | img_tag }}
+  </div>
+  {% endfor %}
+</div>
+
 {% stylesheet %}
 .carousel_wrapper {
 	--foo: hotpink;
@@ -9,7 +16,12 @@
 {% endstylesheet %}
 
 {% javascript %}
-document.querySelector('.carousel').addEventListener('click', (e) => console.log(e));
+	const items = document.querySelectorAll('.carousel_item');
+	items.forEach(item => {
+		item.addEventListener('click', (e) => {
+			console.log(item.classList)
+		})
+	})
 {% endjavascript %}
 
 {% schema %}
