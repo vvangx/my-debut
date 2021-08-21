@@ -22,7 +22,7 @@
 	items.forEach(item => {
 		item.addEventListener('click', (e) => {
 			console.log('clicked');
-			gsap.to(item, {scale: 1.5})
+			gsap.to(item, {rotation: 180, scale: 1.5, yoyo: true});
 		})
 	})
 {% endjavascript %}
