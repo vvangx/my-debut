@@ -1,0 +1,35 @@
+{% for block in section.blocks %}
+	{% if block.settings.check %}
+		<h1>yep!!!</h1>
+		{% else %}
+		<h1>oops...</h1>
+	{% endif %}
+{% endfor %}
+
+{% schema %}
+{
+	"name": "my foo",
+	"settings": [
+		{
+			"type": "text",
+			"label": "my foo text label",
+			"id": "foo",
+			"default": "hello world",
+			"info": "this is a info text"
+		}
+	],
+	"blocks": [
+		{
+			"name": "foo_block",
+			"type": "foo-block",
+			"settings": [
+				{
+					"type": "checkbox",
+					"id": "check",
+					"label": "block checkbox"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

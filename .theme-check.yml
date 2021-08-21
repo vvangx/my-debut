@@ -1,0 +1,16 @@
+ImgLazyLoading:
+  enabled: false
+ImgWidthAndHeight:
+  enabled: false
+DeprecateLazysizes:
+  enabled: false
+SpaceInsideBraces:
+  enabled: false
+UnusedAssign:
+  enabled: false
+DeprecateBgsizes:
+  enabled: false
+UndefinedObject:
+  enabled: false
+LiquidTag:
+  enabled: false
