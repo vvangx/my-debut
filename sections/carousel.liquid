@@ -1,3 +1,5 @@
+<script src="{{ 'gsap.min.js' | asset_url }}" defer></script>
+
 <div class="carousel_wrapper">
   {% for block in section.blocks %}
   <div class="carousel_item">
@@ -19,7 +21,7 @@
 	const items = document.querySelectorAll('.carousel_item');
 	items.forEach(item => {
 		item.addEventListener('click', (e) => {
-			console.log(item.classList)
+			gsap.to(item, {scale: 1.5})
 		})
 	})
 {% endjavascript %}
