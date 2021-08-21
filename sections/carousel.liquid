@@ -1,5 +1,4 @@
 {% render 'foo-snippet', blocks: section.blocks %}
-
 {% stylesheet %}
 .carousel_wrapper {
 	--foo: hotpink;
@@ -10,12 +9,12 @@
 {% endstylesheet %}
 
 {% javascript %}
-	document.querySelector('.carousel').addEventListener('click', (e) => console.log(e));
+document.querySelector('.carousel').addEventListener('click', (e) => console.log(e));
 {% endjavascript %}
 
 {% schema %}
 {
-    "name": "Carousel",
+  "name": "Carousel",
 	"class": "carousel",
 	"blocks": [
 		{
