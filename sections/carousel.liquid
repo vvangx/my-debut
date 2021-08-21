@@ -20,11 +20,15 @@
 {% javascript %}
 	const items = document.querySelectorAll('.carousel_item');
 	items.forEach(item => {
-		item.addEventListener('click', (e) => {
+		item.addEventListener('click', () => {
 			console.log('clicked');
-			gsap.to(item, {duration: 1, rotation: 180, scale: 1.5}).to(item, {rotation: 0, scale: 1})
+			animate(item);
 		})
-	})
+	});
+	function animate(ele) {
+		const timeline = gsap.timeline({repeat: 1, yoyo: true});
+		timeline.to(ele, {x: 200});
+	}
 {% endjavascript %}
 
 {% schema %}
