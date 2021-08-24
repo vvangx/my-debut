@@ -1,8 +1,7 @@
-<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer></script>
 {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script class="swiper-script" src="{{ 'swiper-bundle.min.js' | asset_url }}" defer></script>
 
 {% style %}
-
 .swiper-container {
 	width: 500px;
 	height: 300px;
@@ -20,6 +19,10 @@
 </div>
 
 {% javascript %}
+const script_tag = document.querySelector('.swiper-script');
+script_tag.addEventListener('load', () => {
+	console.log('loaded')
+})
 
 const swiper = new Swiper('.swiper-container', {
 	loop: true,
