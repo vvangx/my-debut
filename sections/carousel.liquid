@@ -1,40 +1,38 @@
-<script src="{{ 'gsap.min.js' | asset_url }}" defer></script>
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer></script>
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
 
-<div class="carousel_wrapper">
+{% style %}
+
+.swiper-container {
+	width: 500px;
+	height: 300px;
+}
+
+{% endstyle %}
+
+<div class="swiper-wrapper">
   {% for block in section.blocks %}
-  <div class="carousel_item">
-	{{ block.settings.carousel_item | img_url: '300x' | img_tag }}
+  <div class="swiper-slide">
+	{{ block.settings.carousel_item | img_url: '300x200' | img_tag }}
   </div>
   {% endfor %}
 </div>
 
-{% stylesheet %}
-.carousel_wrapper {
-	--foo: hotpink;
-}
-.carousel {
-	background-color: pink;
-}
-{% endstylesheet %}
-
 {% javascript %}
-	const items = document.querySelectorAll('.carousel_item');
-	items.forEach(item => {
-		item.addEventListener('click', () => {
-			console.log('clicked');
-			animate(item);
-		})
-	});
-	function animate(ele) {
-		const timeline = gsap.timeline({repeat: 1, yoyo: true});
-		timeline.to(ele, {x: 200});
+
+const swiper = new Swiper('.swiper-container', {
+	loop: true,
+	autoplay: {
+		delay: 3000
 	}
+})
+
 {% endjavascript %}
 
 {% schema %}
 {
   "name": "Carousel",
-	"class": "carousel",
+	"class": "swiper-container",
 	"blocks": [
 		{
 			"name": "carousel item",
